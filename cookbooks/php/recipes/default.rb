@@ -8,6 +8,9 @@ include_recipe "php::pecl_apc"
 # Add the Memcached PECL extension
 include_recipe "php::pecl_memcached"
 
+# Add custom ini settings
+include_recipe "php::ini_custom"
+
 # Reload PHP-FPM config
 ey_cloud_report "php-fpm-reload" do
 	message "restarting php-fpm"
